@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@font-face {
+  font-family: "Evermore";
+  src: url("../fonts/Evermore.ttf") format("truetype");
+  font-weight: 400;
+}
+html {
+  font-size: 16px;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #ffffff;
+  background-color: #4c9540;
+}
+@media (max-width: 992px) {
+  body.hidden {
+    overflow: hidden;
+  }
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Comfortaa", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 30px 0;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 16px 0;
+  }
+}
+@media (max-width: 992px) {
+  .header.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(24, 29, 66, 0.5);
+    z-index: 200;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header__logo {
+  flex: 0 0 auto;
+}
+.header__logo-link {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+.header__logo-link::before {
+  content: "";
+  height: 72px;
+  width: 72px;
+  background: url(../assets/pepe-head.webp) center no-repeat;
+  background-size: 80px;
+  transform: scale(-1, 1);
+}
+@media (max-width: 576px) {
+  .header__logo-link::before {
+    height: 56px;
+    width: 56px;
+    background-size: 64px;
+  }
+}
+.header__logo-image {
+  max-width: 120px;
+}
+@media (max-width: 576px) {
+  .header__logo-image {
+    max-width: 90px;
+  }
+}
+@media (max-width: 992px) {
+  .header.active .header__nav {
+    transform: translateX(0);
+  }
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+@media (max-width: 992px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 400px;
+    width: 100%;
+    padding: 64px 20px 40px;
+    box-sizing: border-box;
+    background-color: #4c9540;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(-800px);
+    transition: transform ease-in-out 0.3s;
+    will-change: transform;
+  }
+}
+@media (max-width: 576px) {
+  .header__nav {
+    max-width: none;
+  }
+}
+.header__nav-link {
+  font-size: 12px;
+  font-weight: 700px;
+  font-family: "Evermore", sans-serif;
+  color: #ffffff;
+  text-transform: lowercase;
+}
+@media (max-width: 992px) {
+  .header__nav-link {
+    font-size: 14px;
+  }
+}
+.header__nav-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: none;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border: none;
+  background: url(../assets/close.svg) center no-repeat;
+  transition: all ease-in-out 0.16s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__nav-close {
+    display: inline-block;
+  }
+}
+.header__nav-close:active {
+  transform: scale(0.96);
+}
+.header__buy {
+  flex: 0 0 auto;
+  display: block;
+}
+@media (max-width: 992px) {
+  .header__buy {
+    display: none;
+  }
+}
+.header__buy-button {
+  display: inline-block;
+  padding: 16px 32px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700px;
+  font-family: "Evermore", sans-serif;
+  border: 2px solid #ffffff;
+  border-radius: 48px;
+  background-color: #4c9540;
+  transition: all ease-in-out 0.16s;
+  cursor: pointer;
+}
+.header__buy-button:hover {
+  color: #4c9540;
+  background-color: #ffffff;
+}
+.header__buy-button:active {
+  transform: scale(0.96);
+}
+.header__burger {
+  flex: 0 0 auto;
+  display: none;
+}
+@media (max-width: 992px) {
+  .header__burger {
+    display: block;
+  }
+}
+.header__burger-button {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border: none;
+  background: url(../assets/burger.svg) center no-repeat;
+  transition: all ease-in-out 0.16s;
+  cursor: pointer;
+}
+.header__burger-button:active {
+  transform: scale(0.96);
+}

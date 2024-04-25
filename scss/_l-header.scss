@@ -1,0 +1,189 @@
+.header {
+  padding: 30px 0;
+  border-bottom: 3px solid rgba($color: #000000, $alpha: 0.2);
+
+  @include laptop {
+    padding: 16px 0;
+  }
+
+  &.active::before {
+    @include laptop {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($color: $black, $alpha: 0.5);
+      z-index: 200;
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    &-link {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+
+      &::before {
+        content: '';
+        height: 72px;
+        width: 72px;
+        background: url(../assets/pepe-head.webp) center no-repeat;
+        background-size: 80px;
+        transform: scale(-1, 1);
+
+        @include mobile {
+          height: 56px;
+          width: 56px;
+          background-size: 64px;
+        }
+      }
+    }
+
+    &-image {
+      max-width: 120px;
+
+      @include mobile {
+        max-width: 90px;
+      }
+    }
+  }
+
+  &.active &__nav {
+    @include laptop {
+      transform: translateX(0);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+
+    @include laptop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 200;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 400px;
+      width: 100%;
+      padding: 64px 20px 40px;
+      box-sizing: border-box;
+      background-color: $green;
+      box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.2);
+      transform: translateX(-800px);
+      transition: transform ease-in-out 0.3s;
+      will-change: transform;
+    }
+
+    @include mobile {
+      max-width: none;
+    }
+
+    &-link {
+      font-size: 12px;
+      font-weight: 700px;
+      font-family: 'Evermore', sans-serif;
+      color: $white;
+      text-transform: lowercase;
+
+      @include laptop {
+        font-size: 14px;
+      }
+    }
+
+    &-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      display: none;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      border: none;
+      background: url(../assets/close.svg) center no-repeat;
+      transition: all ease-in-out 0.16s;
+      cursor: pointer;
+
+      @include laptop {
+        display: inline-block;
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+  }
+
+  &__buy {
+    flex: 0 0 auto;
+    display: block;
+
+    @include laptop {
+      display: none;
+    }
+
+    &-button {
+      display: inline-block;
+      padding: 16px 32px;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700px;
+      font-family: 'Evermore', sans-serif;
+      border: 2px solid $white;
+      border-radius: 48px;
+      background-color: $green;
+      transition: all ease-in-out 0.16s;
+      cursor: pointer;
+
+      &:hover {
+        color: $green;
+        background-color: $white;
+      }
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+  }
+
+  &__burger {
+    flex: 0 0 auto;
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+
+    &-button {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      border: none;
+      background: url(../assets/burger.svg) center no-repeat;
+      transition: all ease-in-out 0.16s;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.96);
+      }
+    }
+  }
+}
