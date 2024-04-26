@@ -144,6 +144,8 @@
       background: url(../assets/copy.svg);
       background-size: cover;
       transition: transform ease-in-out 0.12s;
+      cursor: pointer;
+      
 
       &:active {
         transform: scale(0.97);
