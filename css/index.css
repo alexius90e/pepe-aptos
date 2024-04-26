@@ -420,7 +420,7 @@ h2 {
 .how-to-buy__card {
   display: flex;
   gap: 32px 16px;
-  margin: 24px 0 0;
+  margin: 0 0 24px;
   padding: 24px;
   padding-right: 48px;
   border: 2px solid #ffffff;
@@ -430,7 +430,7 @@ h2 {
 @media (max-width: 992px) {
   .how-to-buy__card {
     flex-direction: column;
-    margin: 14px 0 0;
+    margin: 0 0 14px;
     padding: 16px;
   }
 }
@@ -484,5 +484,102 @@ h2 {
 @media (max-width: 768px) {
   .how-to-buy__card-info-text {
     font-size: 16px;
+  }
+}
+.how-to-buy__bull {
+  display: flex;
+  justify-content: center;
+}
+.how-to-buy__bull-image {
+  width: 480px;
+}
+
+.tokenomics .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 24px;
+}
+@media (max-width: 992px) {
+  .tokenomics .container {
+    gap: 24px;
+  }
+}
+.tokenomics__title {
+  flex: 1 1 100%;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .tokenomics__title {
+    text-align: center;
+  }
+}
+.tokenomics__info {
+  flex: 1 0 40%;
+}
+.tokenomics__info-title {
+  margin: 0 0 50px;
+  font-family: "Evermore", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) -2px -2px 0px, rgba(0, 0, 0, 0.2) -2px 2px 0px, rgba(0, 0, 0, 0.2) 2px 2px 0px, rgba(0, 0, 0, 0.2) 2px -2px 0px;
+}
+@media (max-width: 992px) {
+  .tokenomics__info-title {
+    margin: 0 0 16px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .tokenomics__info-title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .tokenomics__info-title {
+    font-size: 14px;
+  }
+}
+.tokenomics__info-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  border: 2px solid #ffffff;
+  border-radius: 0px 30px 0px 30px;
+  background-color: #264A20;
+}
+@media (max-width: 992px) {
+  .tokenomics__info-advantages {
+    gap: 16px;
+  }
+}
+.tokenomics__info-advantages-item {
+  margin: 0;
+  font-size: 22px;
+}
+@media (max-width: 992px) {
+  .tokenomics__info-advantages-item {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .tokenomics__info-advantages-item {
+    font-size: 16px;
+  }
+}
+.tokenomics__figure {
+  flex: 0 1 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .tokenomics__figure {
+    flex: 1 1 auto;
+  }
+}
+@media (max-width: 992px) {
+  .tokenomics__figure-image {
+    width: 480px;
   }
 }
