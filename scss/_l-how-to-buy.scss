@@ -1,3 +1,78 @@
 .how-to-buy {
-  
+  &__title {
+    margin: 0 0 40px;
+
+    @include laptop {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    gap: 32px 16px;
+    margin: 24px 0 0;
+    padding: 24px;
+    padding-right: 48px;
+    border: 2px solid $white;
+    border-radius: 0px 30px 0px 30px;
+    background-color: $darkgreen;
+
+    @include laptop {
+      flex-direction: column;
+      margin: 14px 0 0;
+      padding: 16px;
+    }
+
+    &-figure {
+      flex: 0 0 240px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include laptop {
+        flex: 0 0 auto;
+      }
+
+      &-image {
+        max-height: 138px;
+        height: auto;
+      }
+    }
+
+    &-info {
+      &-title {
+        font-family: 'Evermore', sans-serif;
+        margin: 0 0 16px;
+        font-size: 23px;
+
+        @include laptop {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        @include tablet {
+          font-size: 18px;
+        }
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      &-text {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include laptop {
+          text-align: center;
+        }
+
+        @include tablet {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
