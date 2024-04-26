@@ -51,14 +51,17 @@
       border: 2px solid $white;
       border-radius: 0px 30px 0px 30px;
       background-color: $darkgreen;
+      box-shadow: 0px 0px 50px 20px rgba(255, 254, 248, 0.18);
 
       @include laptop {
         gap: 16px;
+        padding: 16px;
       }
 
       &-item {
         margin: 0;
         font-size: 22px;
+        line-height: 160%;
 
         @include laptop {
           font-size: 20px;

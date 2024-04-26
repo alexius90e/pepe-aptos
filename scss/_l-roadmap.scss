@@ -1,3 +1,67 @@
 .roadmap {
-  
+  & .container {
+    display: flex;
+    gap: 24px;
+
+    @include laptop {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__pee {
+    flex: 0 1 290px;
+    display: flex;
+    justify-content: center;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__info {
+    flex: 1 1 auto;
+
+    @include laptop {
+      flex: 0 1 auto;
+    }
+
+    &-title {
+      margin: 0 0 24px;
+
+      @include laptop {
+        text-align: center;
+      }
+    }
+
+    &-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0;
+      padding: 24px;
+      list-style-type: none;
+      border: 2px solid $white;
+      border-radius: 0px 30px 0px 30px;
+      background-color: $darkgreen;
+      box-shadow: 0px 0px 50px 20px rgba(255, 254, 248, 0.18);
+
+      &-item {
+        font-size: 22px;
+        line-height: 150%;
+        text-align: center;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &__frog {
+    flex: 0 1 290px;
+
+    @include laptop {
+      display: none;
+    }
+  }
 }
