@@ -1,2 +1,9 @@
 .main {
+  & > section {
+    padding: 60px 0;
+
+    @include laptop {
+      padding: 40px 0;
+    }
+  }
 }

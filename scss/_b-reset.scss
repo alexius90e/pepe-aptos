@@ -44,3 +44,27 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+h2 {
+  font-size: 56px;
+  font-weight: 700;
+  font-family: 'Evermore', sans-serif;
+  color: $white;
+  text-transform: lowercase;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) -2px -2px 0px, rgba(0, 0, 0, 0.2) -2px 2px 0px,
+    rgba(0, 0, 0, 0.2) 2px 2px 0px, rgba(0, 0, 0, 0.2) 2px -2px 0px;
+
+  @include laptop {
+    font-size: 46px;
+    text-align: left;
+  }
+
+  @include tablet {
+    font-size: 36px;
+  }
+
+  @include mobile {
+    font-size: 27px;
+  }
+}

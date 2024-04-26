@@ -1,10 +1,4 @@
 .first-screen {
-  padding: 80px 0;
-
-  @include laptop {
-    padding: 48px 0;
-  }
-
   & .container {
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +21,7 @@
 
       &-image {
         max-width: 200px;
-        filter: drop-shadow(3px 3px 0 black) ;
+        filter: drop-shadow(3px 3px 0 black);
       }
     }
 
