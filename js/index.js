@@ -20,3 +20,13 @@ if (burgerButton && header && headerNav) {
     }
   });
 }
+
+const buyTokenButton = document.querySelector('.first-screen__token-button');
+const buyTokenCode = document.querySelector('.first-screen__token-code');
+
+if (buyTokenButton && buyTokenCode) {
+  buyTokenButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(buyTokenCode.innerText);
+    buyTokenButton.classList.add('active');
+  });
+}

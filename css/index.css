@@ -54,7 +54,6 @@ h2 {
 @media (max-width: 992px) {
   h2 {
     font-size: 46px;
-    text-align: left;
   }
 }
 @media (max-width: 768px) {
@@ -259,11 +258,14 @@ h2 {
 }
 
 .main > section {
-  padding: 60px 0;
+  background: url(../assets/divider.png) top center repeat-x;
+  background-size: 1920px 20px;
+  padding: 80px 0;
 }
 @media (max-width: 992px) {
   .main > section {
-    padding: 40px 0;
+    padding: 60px 0;
+    background-size: 1920px 16px;
   }
 }
 
@@ -275,8 +277,34 @@ h2 {
   border-top: 3px solid rgba(0, 0, 0, 0.2);
 }
 
+.first-screen {
+  position: relative;
+  background: none !important;
+}
+.first-screen::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 700px;
+  aspect-ratio: 1/1;
+  background: url(../assets/bull.png) center no-repeat;
+  background-size: contain;
+  transform: scale(-1, 1) translateY(-50%) translateX(800px);
+  opacity: 0.05;
+}
+@media (max-width: 992px) {
+  .first-screen::before {
+    display: none;
+  }
+}
 .first-screen .container {
+  position: relative;
+  z-index: 2;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
 }
@@ -354,6 +382,54 @@ h2 {
     width: 480px;
   }
 }
+.first-screen__token {
+  flex: 0 1 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 16px 32px;
+  border: 3px solid #ffffff;
+  border-radius: 64px;
+}
+@media (max-width: 576px) {
+  .first-screen__token {
+    gap: 12px;
+    padding: 8px 16px;
+    border-width: 2px;
+  }
+}
+.first-screen__token-code {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  word-break: break-all;
+}
+@media (max-width: 576px) {
+  .first-screen__token-code {
+    font-size: 16px;
+  }
+}
+.first-screen__token-button {
+  flex: 0 0 auto;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border: none;
+  background: url(../assets/copy.svg);
+  background-size: cover;
+  transition: transform ease-in-out 0.12s;
+}
+.first-screen__token-button:active {
+  transform: scale(0.97);
+}
+@media (max-width: 576px) {
+  .first-screen__token-button {
+    height: 24px;
+    width: 24px;
+  }
+}
 
 .about .container {
   display: flex;
@@ -398,15 +474,11 @@ h2 {
   margin: 0;
   text-align: center;
 }
-@media (max-width: 992px) {
-  .about__info-title {
-    text-align: left;
-  }
-}
 .about__info-text {
   margin: 0;
   font-size: 24px;
   line-height: 150%;
+  text-align: center;
 }
 .about__info-text span {
   word-break: break-all;
